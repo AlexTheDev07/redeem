@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem</title>
+    <h1>Redeem your code here!<br></h1>
+ <input type="text" id="id1" > <br><button class="buttonload"  type="button"  onclick="getValueInput()">Redeem
+  </button>
+  <p id="val"></p>
+  <style>
+    p{
+      font-family: cursive;
+      font-size: 25px;
+      color: bisque;
+      animation: wiggles 3s linear 0s infinite alternate;
+    }
+    input{
+      margin-top: 25px;
+      border-radius: 5px;
+      height: 50px;
+      width: 500px;
+      background-color: bisque;
+      font-family: cursive;
+      font-size: 25px;
+      animation: shake 5s linear 0s infinite alternate;
+    }
+    body{
+      text-align: center;
+      background-color: rgb(50, 50, 50);
+    }
+    h1{
+      margin-top: 100px;
+      color: rgb(152,251,152);
+      font-family: cursive;
+      font-size: 50px;
+      animation: colors 5s linear 0s infinite alternate;
+    }
+    button{
+      background-color: rgb(152,251,152);
+      border-radius: 5px;
+      height: 30px;
+      width: 500px;
+      margin-top: 15px;
+      border-color: aquamarine;
+      font-family: cursive;
+      font-size: 20px;
+      animation: shake 5s linear 0s infinite alternate;
+    }
+    button:hover{
+      background-color: aquamarine;
+    }
+    @keyframes colors {
+      0%   {color:red; left:0px; top:0px;}
+      25%  {color:yellow; left:200px; top:0px;}
+      50%  {color:blue; left:200px; top:200px;}
+      75%  {color:green; left:0px; top:200px;}
+      100% {color:red; left:0px; top:0px;}
+    }
+
+    @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes spin {
+        from {
+            transform: rotate(0deg);
+        } to {
+            transform: rotate(360deg);
+        }
+    }
+
+@keyframes wiggles {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+  </style>
+</head>
+<body>
+
+</body>
+<script>
+    const getValueInput = () =>{
+      let val1 = document.querySelector("#id1").value;
+      document.querySelector("#val").innerHTML = `${val1}`;
+      if (val1 == "5839574923535" || val1 == "4734352783546" || val1 == "2342326534643" || val1 == "634674364373" || val1 == "467423643634" || val1 == "7575484524323" || val1 == "743737734786" || val1 == "643737473474" || val1 == "7434534894564" || val1 == "679574363743") {
+        document.querySelector("#val").innerHTML = `Reedemed!`;
+        myFunction()
+      } else if (val1 == "3956092439035") {
+        document.querySelector("#val").innerHTML = `Reedemed!`;
+        Other()
+      } else {
+        document.querySelector("#val").innerHTML = `Not valid!`;
+      }
+    }
+
+    function SveaFireworks() {
+      alert("Also read the ReadMe file inside the zip folder when downloaded!")
+      location.href = "sveafireworks.zip";
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1031935314832412723/MwfJthHTiSHjcnIS7wyLm8TV1ED3oXFJ-Ncdbz4LhSesAE_BUzdnELmoPtl_9ikQHic9");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "MR Redeem",
+        avatar_url: "",
+        content: "Reedemed a SveaFirework code!"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+
+    function myFunction() {
+  let text = "Press OK to continue!";
+  if (confirm(text) == true) {
+    text = "Downloaded!";
+    SveaFireworks()
+  } else {
+    text = "You canceled!";
+  }
+  document.getElementById("val").innerHTML = text;
+}
+
+</script>
+  </script>
+</html>
