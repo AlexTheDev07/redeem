@@ -1,4 +1,4 @@
-# reedem
+# Read Me
 
 Discord: Alex07#4043
 
